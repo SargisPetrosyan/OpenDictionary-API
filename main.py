@@ -10,37 +10,33 @@ from services import (
 )
 
 
-api = FastAPI()
+app = FastAPI()
 
-@api.get("/")
-def index():
-    return {"Hello": "Word"}
-
-@api.get('/{word}/definitions')
+@app.get('/{word}/definitions')
 async def get_definitions(word:str):
-    await get_word_definitions(word=word)
+    return await get_word_definitions(word=word)
 
-@api.get('/{word}/examples')
+@app.get('/{word}/examples')
 async def get_examples(word:str):
-    await get_word_examples(word=word)
+    return await get_word_examples(word=word)
 
-@api.get('/{word}/synonyms')
+@app.get('/{word}/synonyms')
 async def get_synonym(word:str):
-    await get_word_synonyms(word=word)
+    return await get_word_synonyms(word=word)
 
-@api.get('/{word}/antonyms')
+@app.get('/{word}/antonyms')
 async def get_antonym(word:str):
-    await get_word_antonyms(word=word)
+    return await get_word_antonyms(word=word)
 
-@api.get('/{word}/collections')
+@app.get('/{word}/collections')
 async def get_collection(word:str):
-    await get_collection(word=word)
+    return await get_collection(word=word)
 
-@api.get('/{word}/usage_nots')
+@app.get('/{word}/usage_nots')
 async def get_usage_nots(word:str):
-    await get_word_usage_nots(word=word)
+    return await get_word_usage_nots(word=word)
 
-@api.get('/{word}/related_words')
+@app.get('/{word}/related_words')
 async def get_related_words(word:str):
-    await get_word_related_words(word=word)
+    return await get_word_related_words(word=word)
 

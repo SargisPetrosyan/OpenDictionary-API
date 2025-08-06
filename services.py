@@ -1,17 +1,17 @@
 async def get_word_examples(word:str):
-    pass
+    return word + " examples"
 
 async def get_word_definitions(word:str):
-    pass
+    return word + " definitions"
 
 async def get_word_synonyms(word:str):
-    pass
+    return word + " synonyms"
 
 async def get_word_antonyms(word:str):
-    pass
+    return word + " antonyms"
 
 async def get_word_usage_nots(word:str):
-    pass
+    return word + " usage_nots"
 
 async def get_word_related_words(word:str):
-    pass
+    return word + " related_words"
